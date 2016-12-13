@@ -1,0 +1,111 @@
+@header: #ddd;
+.worksheet {
+  padding: 1em;
+  max-width: 1200px;
+  margin: auto;
+  header {
+    text-align: center;
+    h1, h2, h3 {
+      font-family: Rockwell, sans-serif;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    h1 {
+      font-size: 1.4em;
+    }
+    h2 {
+      font-size: 1.25em;
+    }
+    p {
+      
+    }
+    ul {
+      margin: auto;
+      width: 600px;
+      text-align: left;
+    }
+  }
+  .example {
+    display: flex;
+    padding: 2em;
+    border: solid 2px;
+    h1, h2, h3, h4 {
+      text-decoration: none;
+    }
+    > div {
+      padding: 0 0.5em;
+    }
+    .image {
+      height: auto;
+      width: auto;
+    }
+    .description {
+      flex: 1;
+      h3 {
+        font-size: 18px;
+      }
+      width: 250px;
+      text-align: left;
+    }
+    .bonus {
+      flex: 1;
+      text-align: left;
+      bottom: 10px;
+      padding: 1em;
+      border: dashed 1px;
+
+      img {
+        width: 100%;
+      }
+    }
+    .code {
+      flex: 1;
+      img {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.exercise {
+  border: dotted 1px;
+  flex: 1;
+  padding: 1em;
+  height: 400px;
+  position: relative;
+  table {
+    td {
+      border: solid 2px #8b8b8b;
+    }
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.content {
+  padding: 25px;
+  font-family: Rockwell, sans-serif;
+  h2 {
+    font-size: 1.15em;
+  }
+}
+
+.exercise-row {
+  display: flex;
+}
+
+.cell.filled {
+  overflow: hidden;
+  .filling {
+    content: url('/img/black-square.png') !important;
+    width: 100%;
+    height: 100%;
+  }
+}

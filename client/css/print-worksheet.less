@@ -1,0 +1,23 @@
+@media print {
+  body {
+    // print backround colors on td's in chrome
+    -webkit-print-color-adjust: exact !important;
+  }
+  .instructions {
+    display: none !important;
+  }
+  .include-instructions {
+    .instructions {
+      display: block !important;
+    }
+  }
+  .fixed, .meta {
+    display: none;
+  }
+  .content {
+    page-break-before: always;
+  }
+  .exercise-row {
+    page-break-inside: never;
+  }
+}

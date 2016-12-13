@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Graph Programming Worksheet Generator</title>
+    <link type="text/css" rel="stylesheet" href="/css/client.css" />
+    <link type="text/css" rel="stylesheet" href="/css/worksheet.css" />
+    <link type="text/css" rel="stylesheet" href="/css/print-worksheet.css" />
+    <link type="image/x-icon" rel="icon" href="/img/print-icon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+  </head>
+  <body class="include-instructions">
+    <div class="fixed">
+      <form id="worksheet-form" class="form-inline offset-top">
+        <div class="form-group">
+          <label for="level">Number of Dimensions Per Square</label> <input id="dim" class="form-control" type="number" name="level">
+        </div>
+        <div class="form-group">
+          <input type="submit" class="btn btn-success" value="Generate Square">
+        </div>
+      </form>
+      <div class="form-group offset-top">
+        <button class="btn btn-info" id="create-new-row-btn">Add new row</button>
+      </div>
+      <div class="print form-group" id="print-btn">
+        <div class="prompt">
+          Print
+          <small>
+            <label for="include-instructions">Include Instructions</label>
+            <input type="checkbox" checked id="include-instructions-checkbox" name="include-instructions">
+          </small>
+        </div>
+        <img src="/img/print-icon.png" alt="Print Icon">
+      </div>
+    </div>
+    <div class="meta">
+      <h1 class="title">Graph Worksheet Generator</h1>
+      <p class="lead">
+        Create printable Graph Programming worksheets of different difficulty levels.
+        Based on <a href="https://code.org" target="_blank">Code.org</a>'s <a href="https://code.org/curriculum/course2/1/Teacher" target="_blank">Graph Paper Programming</a> lessons.
+      </p>
+      <p class="lead">
+      </p>
+    </div>
+    <div class="worksheet">
+      <header class="instructions">
+        <h1>Graph Programming Worksheet</h1>
+        <p>
+          For each graph, create the program that will be able to draw that graph, if the program started at the top left hand corner.
+        </p>
+        <ul>
+          <li>
+            An <strong>algorithm</strong> is a list of steps that you can follow to finish a task.
+          </li>
+          <li>
+            A <strong>program</strong> is an algorithm that has been coded into something that can be run by a machine.
+          </li>
+        </ul>
+        <div class="key">
+          <h2>Program Code Meanings</h2>
+          <img src="https://code.org/curriculum/course2/1/key.png" alt="Key">
+        </div>
+        <h2>Example</h2>
+        <div class="example">
+          <div class="image">
+            <h3>The graph</h3>
+            <img src="https://code.org/curriculum/course2/1/checkerboard.png" alt="Example Graph">
+          </div>
+          <div class="description">
+            <h3>The algorithm to create this graph (left):</h3>
+            Move Right, Fill-In Square, Move Right, Move Down
+            Fill-In Square, Move Left, Move Left, Fill-In Square
+            Move Down, Move Right, Fill-In Square, Move Right”
+            <div class="code">
+              <h3>In code (the program):</h3>
+              <img src="https://code.org/curriculum/course2/1/program1.png" alt="Exmaple Code">
+            </div>
+          </div>
+          <div class="bonus">
+            <strong>Bonus:</strong> Feel free to use loops, variables, conditional logic, and/or functions if you know them!
+            <p>
+              Here is an example of a program that completes this drawing using <strong>variables</strong> and <strong>loops</strong>.
+            </p>
+            <img src="/img/bonus_example.png" alt="Bonus Example Program">
+
+          </div>
+        </div>
+      </header>
+      <article class="content">
+        <h2>Write the program for each of these graphs</h2>
+        <div id="exercises">
+          <div class="exercise-row"></div>
+        </div>
+      </article>
+    </div>
+
+    <script src="/js/client.js"></script>
+  </body>
+</html>
