@@ -7,12 +7,17 @@ var exerciseHTML = function(dimension) {
   var width = Math.floor(tableWidth / dimension);
   var height = width;
   var trs = '';
+  var x = 0;
+  var isFilled = true;
   for (var i = 0; i < dimension; i++) {
+    x++;
     trs += '<tr>';
     // add 3 columns per row
     for (var j = 0; j < dimension; j++) {
+      x++;
       // td
-      var isFilled = Math.round(Math.random());
+      isFilled = !isFilled;
+      // || Math.round(Math.random());
       trs += `<td class="cell ${isFilled ? 'filled' : ''}" style="width:${width}px;height:${height}px;"><div class="filling" /></td>\n`;
     }
     trs += "</tr>";

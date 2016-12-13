@@ -3,6 +3,9 @@
     // print backround colors on td's in chrome
     -webkit-print-color-adjust: exact !important;
   }
+  .worksheet {
+    margin-top: 0;
+  }
   .instructions {
     display: none !important;
     page-break-inside: never;
@@ -16,7 +19,7 @@
   .fixed, .meta {
     display: none;
   }
-  .content {
+  .first:not(:empty) {
     page-break-before: always;
   }
   .exercise-row, .exercise, .example {
@@ -25,8 +28,8 @@
   .close-btn {
     display: none !important;
   }
-  .exercise-row:nth-child(odd):not(:empty) {
-    page-break-before: always;
+  .exercise-row:nth-child(even):not(:empty):not(.first) {
+    page-break-after: always;
     padding-bottom: 0;
     margin-bottom: 0;
   }
