@@ -28,9 +28,14 @@
   .close-btn {
     display: none !important;
   }
-  .exercise-row:nth-child(even):not(:empty):not(.first) {
-    page-break-after: always;
+  .exercise-row:nth-child(odd):not(:empty):not(.first) {
+    page-break-before: always;
     padding-bottom: 0;
     margin-bottom: 0;
+  }
+  .exercise-row {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
   }
 }
