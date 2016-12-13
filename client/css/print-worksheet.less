@@ -25,8 +25,9 @@
   .close-btn {
     display: none !important;
   }
-  .exercise-row:nth-child(even):not(:empty) {
-    page-break-after: always;
-    margin: 0;
+  .exercise-row:nth-child(odd):not(:empty) {
+    page-break-before: always;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }
