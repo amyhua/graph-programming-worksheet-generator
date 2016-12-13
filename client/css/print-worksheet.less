@@ -5,9 +5,11 @@
   }
   .instructions {
     display: none !important;
+    page-break-inside: never;
   }
   .include-instructions {
     .instructions {
+      page-break-inside: never;
       display: block !important;
     }
   }
@@ -17,7 +19,14 @@
   .content {
     page-break-before: always;
   }
-  .exercise-row {
+  .exercise-row, .exercise, .example {
     page-break-inside: never;
+  }
+  .close-btn {
+    display: none !important;
+  }
+  .exercise-row:nth-child(even):not(:empty) {
+    page-break-after: always;
+    margin: 0;
   }
 }
