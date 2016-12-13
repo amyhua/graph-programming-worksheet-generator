@@ -8,7 +8,6 @@ var exerciseHTML = function(dimension) {
   var height = width;
   var trs = '';
   var x = 0;
-  var isFilled = true;
   for (var i = 0; i < dimension; i++) {
     x++;
     trs += '<tr>';
@@ -16,8 +15,7 @@ var exerciseHTML = function(dimension) {
     for (var j = 0; j < dimension; j++) {
       x++;
       // td
-      isFilled = !isFilled;
-      // || Math.round(Math.random());
+      var isFilled = Math.round(Math.random());
       trs += `<td class="cell ${isFilled ? 'filled' : ''}" style="width:${width}px;height:${height}px;"><div class="filling" /></td>\n`;
     }
     trs += "</tr>";
